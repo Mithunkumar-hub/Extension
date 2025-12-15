@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "WhatsApp Chat Scraper",
+    "version": "1.0",
+    "description": "Scrapes public names and phone numbers from WhatsApp Web chats.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://web.whatsapp.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "16icon.png",
+            "48": "48icon.png",
+            "128": "128icon.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+}
